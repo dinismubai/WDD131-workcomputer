@@ -1,0 +1,87 @@
+@media only screen and (min-width: 35rem) {
+
+    #heroimg {
+        display: block; /* Show the hero image for larger screens */
+    }
+
+    #home-grid {
+        display: block; /* Override grid layout if necessary */
+    }
+    /* General Styles */
+    body, main {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    header {
+        background-color: #003049;
+        color: #eae2b7;
+        padding: 1.4rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #countryh1 {
+        font-size: 4rem;
+        letter-spacing: 12px;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Hero Section */
+    #heroimage {
+        grid-column: 1 / -1; /* Spans full width in a grid layout */
+        background-image: url('images/coconut-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 70vh;
+        aspect-ratio: 16 / 9; /* Set the desired aspect ratio */
+    }
+
+    /* Data Section */
+    #data {
+        position: absolute; /* Positioned relative to the viewport */
+        top: calc(4rem + 80px); /* Below the header (h1 height + margin) */
+        left: 20px; /* Close to the left of the page */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        z-index: 10; /* Ensures it's above other content */
+    }
+
+    /* Weather Section */
+    #weather {
+        position: absolute; /* Positioned relative to the viewport */
+        bottom: -190px; /* Close to the bottom of the page */
+        right: 20px; /* Close to the right of the page */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+        z-index: 10; /* Ensures it's above other content */
+    }
+
+    /* Footer Section */
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #003049;
+        position: relative;
+        z-index: 1;
+        top: 280px;
+    }
+
+    /* Hide extra image */
+    #image {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+}
