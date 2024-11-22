@@ -1,13 +1,11 @@
 @media only screen and (min-width: 35rem) {
 
-    #heroimg {
-        display: block; /* Show the hero image for larger screens */
-    }
 
     #home-grid {
-        display: block; /* Override grid layout if necessary */
+        display: block;
+        margin: 0; 
     }
-    /* General Styles */
+
     body, main {
         margin: 0;
         padding: 0;
@@ -30,50 +28,55 @@
         margin: 0;
     }
 
-    /* Hero Section */
     #heroimage {
-        grid-column: 1 / -1; /* Spans full width in a grid layout */
-        background-image: url('images/coconut-hero.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        max-width: 1200px;
         width: 100%;
-        height: 70vh;
-        aspect-ratio: 16 / 9; /* Set the desired aspect ratio */
+        height: 70vh; /* Adjust height based on preference */
+        position: relative;
+        z-index: 1; /* Ensure it's above the background but below other elements */
+    }
+
+    #heroimg{
+        width: 100vw; /* The image will scale to the width of its container */
+        height: 80vh; /* Maintains the aspect ratio */
+        display: block; /* Removes inline gaps in container */
     }
 
     /* Data Section */
     #data {
-        position: absolute; /* Positioned relative to the viewport */
-        top: calc(4rem + 80px); /* Below the header (h1 height + margin) */
-        left: 20px; /* Close to the left of the page */
-        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        position: absolute;
+        top: calc(4rem + 90px); /* Adjust based on header height */
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
         padding: 15px;
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
-        z-index: 10; /* Ensures it's above other content */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 10; /* Above the hero image */
     }
 
     /* Weather Section */
     #weather {
-        position: absolute; /* Positioned relative to the viewport */
-        bottom: -190px; /* Close to the bottom of the page */
-        right: 20px; /* Close to the right of the page */
-        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        position: absolute;
+        bottom: 120px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
         padding: 15px;
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
-        z-index: 10; /* Ensures it's above other content */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 10; /* Above the hero image */
     }
 
     /* Footer Section */
     footer {
+        background-color: #003049;
+        color: #eae2b7;
         text-align: center;
         padding: 10px;
-        background-color: #003049;
-        position: relative;
-        z-index: 1;
-        top: 280px;
+        position: relative; /* Default flow positioning */
+        z-index: 1; /* Below the floating elements */
     }
 
     /* Hide extra image */
