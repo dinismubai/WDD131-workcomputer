@@ -75,7 +75,6 @@ p{
 }
 
 hr{
-	/*background-color: #d62828;*/
 	background-color:#d62828;
 }
 
@@ -95,14 +94,14 @@ footer {
 
 @media only screen and (max-width: 35rem) {
     #data {
-        position: relative; /* Stacks below other elements */
+        position: relative; 
         margin: 20px;
     }
     #weather {
-        position: relative; /* Stacks below other elements */
+        position: relative; 
         margin: 20px;
     }
     #heroimage {
-        height: 5vh; /* Adjust for smaller screens */
+        height: 5vh; 
     }
 }
